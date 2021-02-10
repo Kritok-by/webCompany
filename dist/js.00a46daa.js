@@ -380,6 +380,17 @@ var photos = new _goods.Goods('.goods', _db.goods);
 document.querySelector('.burger').addEventListener('click', function () {
   return (0, _burgerToggle.burgerToggle)('.modal');
 });
+document.querySelector('.filter-button').addEventListener('click', function () {
+  (0, _burgerToggle.burgerToggle)('.filter');
+  (0, _burgerToggle.burgerToggle)('.background');
+});
+document.querySelector('.close').addEventListener('click', function () {
+  (0, _burgerToggle.burgerToggle)('.filter');
+  (0, _burgerToggle.burgerToggle)('.background');
+});
+document.querySelector('.fa-search').addEventListener('click', function () {
+  return (0, _burgerToggle.burgerToggle)('.mobile-input');
+});
 },{"./burgerToggle":"js/burgerToggle.js","./db":"js/db.js","./goods":"js/goods.js","./select":"js/select.js"}],"../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -408,7 +419,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "59772" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "61521" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

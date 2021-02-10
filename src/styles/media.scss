@@ -11,6 +11,11 @@
             flex-basis: 95%;
             .burger{
               display: block;
+              &:hover{
+                i{
+                  background: #FBFF3D;
+                }
+              }
             }
             .number{
               display: none;
@@ -29,6 +34,11 @@
               width: 21px;
               height: 22px;
               margin-top: 2px;
+            }
+            &:hover {
+              svg{
+                fill: #FBFF3D;
+              }
             }
           }
         }
@@ -68,7 +78,44 @@
     .page{
       padding: 6px 0;
       .filter{
+        position: absolute;
+        top: 146px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 82%;
         display: none;
+        background: #fff;
+        z-index: 3;
+        padding: 21px 18px;
+        .select.brand{
+          margin: 0;
+        }
+        .select__input,.min,.max,.submit-filter{
+          margin: 0;
+          margin-bottom: 19px;
+          width: 100%;
+          max-width: inherit;
+        }
+        .min,.max{
+          span{
+            margin-left: 18px;
+          }
+          input{
+            margin-right: 18px;
+          }
+        }
+        &.active{
+          display: block;
+          .sub{
+            display: none;
+          }
+          .submit-filter{
+            display: flex;
+          }
+          .close{
+            display: block;
+          }
+        }
       }
       .mobile-filter{
         display: flex;
@@ -136,6 +183,27 @@
 
 @media(max-width: 768px){
   .wrapper{
+    .header .header-contacts .center {
+      .contacts {
+        .logo{
+          margin-left: 22px;
+        }
+        .search {
+          border: none;
+          text-align: right;
+          .search-input {
+            display: none;
+          }
+          &:hover{
+            color: #FBFF3D;
+          }
+        }
+      }
+      .cart{
+        margin-left: 18px;
+      }
+    }
+
     .page{
       .goods{
         grid-template-columns: 1fr 1fr;
@@ -150,12 +218,20 @@
       .goods{
         grid-template-columns: 1fr;
         .card{
+          padding: 18px;
           &.first{
+            padding: 18px;
             grid-column-start: 1;
             grid-column-end: 2;
             flex-wrap: wrap;
             img{
               flex-basis: 100%;
+            }
+            .card-description{
+              flex-basis: 100%;
+              .text, .cost, .old-cost{
+                margin-left: 0;
+              }
             }
           }
         }

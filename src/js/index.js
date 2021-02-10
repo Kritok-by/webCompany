@@ -15,3 +15,12 @@ const brand = new Select('.brand', {
 const photos = new Goods('.goods', goods)
 
 document.querySelector('.burger').addEventListener('click', ()=>burgerToggle('.modal'))
+document.querySelector('.filter-button').addEventListener('click', ()=>{
+  burgerToggle('.filter')
+  burgerToggle('.background')
+})
+document.querySelector('.close').addEventListener('click', ()=>{
+  burgerToggle('.filter')
+  burgerToggle('.background')
+})
+document.querySelector('.fa-search').addEventListener('click', ()=>burgerToggle('.mobile-input'))
